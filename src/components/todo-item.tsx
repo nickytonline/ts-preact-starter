@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import { h } from 'preact';
 
 interface TodoItemProps {
   text: string;

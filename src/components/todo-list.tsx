@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import { Component, h } from 'preact';
 import TodoItem from './todo-item';
 
 interface TodoListState {
@@ -6,7 +6,7 @@ interface TodoListState {
   text: string;
 }
 
-export default class TodoList extends preact.Component<{}, TodoListState> {
+export default class TodoList extends Component<{}, TodoListState> {
   state = { todos: [], text: '' };
 
   setText = (e: Event) => {

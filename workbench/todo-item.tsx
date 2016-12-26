@@ -1,5 +1,5 @@
 import { storiesOf } from '@kadira/storybook';
-import * as preact from 'preact';
+import { h } from 'preact';
 import TodoItem from '../src/components/todo-item';
 
 declare var module;
