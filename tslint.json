@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "indent": [true, "spaces"],
+    "no-duplicate-variable": true,
+    "no-eval": true,
+    "no-trailing-whitespace": true,
+    "no-var-keyword": true,
+    "quotemark": [true, "single"],
+    "semicolon": true,
+    "member-ordering": [true,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ]
+  }
+}
