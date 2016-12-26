@@ -6,6 +6,7 @@
   "author": "Nick Taylor <nick@iamdeveloper.com>",
   "license": "MIT",
   "keywords": [
+    "preact",
     "react",
     "typescript",
     "boilerplate"
