@@ -4,7 +4,7 @@ import TodoItem from '../src/components/todo-item';
 
 declare var module;
 
-storiesOf('Hello World', module)
+storiesOf('Todo Item', module)
   .add('with text', () => {
 
     return (

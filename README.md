@@ -22,6 +22,5 @@ To run the workbench:
 * `npm run workbench` or `yarn run workbench`
 * Navigate to [http://localhost:9001](http://localhost:9001)
 * For more information on using the workbench, see:
-  * [React Storybook](https://github.com/storybooks/preact-storybook)
-  * [React Storybook Knobs Add-on](https://github.com/storybooks/storybook-addon-knobs)
-  * View the [existing workbench]() online
+  * [React Storybook](https://github.com/storybooks/react-storybook)
+  * View the [existing workbench](https://b4e17b84-5d2d-4b87-a20a-4a0c87ccd537.sbook.io) online
