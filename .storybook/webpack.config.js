@@ -12,7 +12,7 @@ module.exports = {
     publicPath: ''
   },
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js", "jsx"],
+    extensions: ['', '.ts', '.tsx', '.js', 'jsx'],
     alias: {
       'react': 'preact-compat',
       'react-dom': 'preact-compat'
@@ -22,12 +22,12 @@ module.exports = {
   module: {
     preLoaders: [{
       test: /\.tsx?$/,
-      loader: "tslint",
+      loader: 'tslint',
       exclude: /node_modules/
     }],
     loaders: [{
       test: /\.tsx?$/,
-      loader: "awesome-typescript",
+      loader: 'awesome-typescript',
       exclude: /node_modules/
     }]
   },

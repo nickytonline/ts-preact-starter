@@ -1,56 +1,57 @@
-const path = require('path');
 const {HotModuleReplacementPlugin} = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = 3000;
+const context = __dirname + '/src';
+const environment = process.env.NODE_ENV;
 
 const webpackConfig = {
   name: 'client',
   target: 'web',
+  context,
   entry: {
-    app: [
-      './src/index.tsx',
-      `webpack-dev-server/client?http://localhost:${port}/`,
-      'webpack/hot/dev-server'
-    ],
+    app: './index.tsx'
   },
   output: {
     filename: '[name].js',
-    path: 'dist',
-    publicPath: ''
+    path: __dirname + 'dist',
   },
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js", "jsx"]
+    extensions: ['.ts', '.tsx', '.js', 'jsx']
   },
   devtool: 'source-map',
   module: {
-    preLoaders: [{
+    rules: [{
+      enforce: 'pre',
       test: /\.tsx?$/,
-      loader: "tslint",
-      exclude: /node_modules/
-    }],
-    loaders: [{
+      use: 'tslint-loader',
+      exclude: /node_modules/,
+      options: {
+        configFile: './tslint.json',
+        emitErrors: true,
+        failOnHint: true
+      }
+    },
+    {
       test: /\.tsx?$/,
-      loader: "awesome-typescript",
+      use: 'awesome-typescript-loader',
       exclude: /node_modules/
     }]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
       hash: true,
       filename: 'index.html',
       inject: 'body',
     }),
     new HotModuleReplacementPlugin()
-  ],
-  tslint: {
-    configFile: './tslint.json',
-    emitErrors: true,
-    failOnHint: true
-  },
-  devServer: {
+  ]
+};
+
+if (environment === 'dev') {
+  webpackConfig.devServer = {
     port,
-    contentBase: path.join(process.cwd(), 'src'),
+    contentBase: context,
     historyApiFallback: true,
     stats: {
       colors: true
@@ -58,8 +59,7 @@ const webpackConfig = {
     noInfo: false,
     quiet: false,
     hot: true
-  },
-
-};
+  }
+}
 
 module.exports = webpackConfig;
