@@ -9,7 +9,7 @@ storiesOf('Todo Item', module)
 
     return (
       <TodoItem
-        text='pick up milk'
+        text="pick up milk"
         />
     );
   });
