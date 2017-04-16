@@ -45,6 +45,7 @@
     "webpack-dev-server": "2.1.0-beta.12"
   },
   "dependencies": {
-    "preact": "8.1.0"
+    "preact": "8.1.0",
+    "tslib": "1.6.0"
   }
 }
