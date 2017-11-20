@@ -11,6 +11,7 @@
     "typescript",
     "boilerplate"
   ],
+  "engines" : { "node" : ">=6" },
   "scripts": {
     "build": "webpack --env.NODE_ENV=prod",
     "start": "webpack-dev-server --env.NODE_ENV=dev --progress --debug --config ./webpack.config.js",
