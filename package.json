@@ -14,17 +14,14 @@
   "engines" : { "node" : ">=6" },
   "scripts": {
     "build": "webpack --env.NODE_ENV=prod",
-    "start": "webpack-dev-server --env.NODE_ENV=dev --progress --debug --config ./webpack.config.js",
+    "start":
+      "webpack-dev-server --env.NODE_ENV=dev --progress --debug --config ./webpack.config.ts",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "workbench": "start-storybook -p 9001"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
     },
@@ -38,6 +35,7 @@
     "jest": "18.0.0",
     "preact-compat": "3.9.4",
     "ts-loader": "3.1.1",
+    "ts-node": "3.3.0",
     "tslint": "5.8.0",
     "tslint-loader": "3.5.3",
     "typescript": "2.6.1",
