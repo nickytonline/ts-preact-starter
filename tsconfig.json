@@ -4,10 +4,9 @@
     "jsx": "react",
     "target": "es5",
     "module": "commonjs",
-    "lib": [
-      "dom", "es2015"
-    ],
+    "lib": ["dom", "es2015"],
     "jsxFactory": "h",
-    "noEmitHelpers": true
+    "noEmitHelpers": true,
+    "importHelpers": true
   }
 }

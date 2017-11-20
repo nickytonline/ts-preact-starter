@@ -10,30 +10,26 @@ export default class TodoList extends Component<{}, TodoListState> {
   state = { todos: [], text: '' };
 
   setText = (e: Event) => {
-    this.setState({ text: (e.target as HTMLInputElement).value } as TodoListState);
+    this.setState({
+      text: (e.target as HTMLInputElement).value
+    } as TodoListState);
   }
 
   addTodo = () => {
     const { todos, text } = this.state;
 
     this.setState({
-      todos: [
-        ...todos,
-        { text }
-      ], text: ''
+      todos: [...todos, { text }],
+      text: ''
     });
   }
 
-  render({ }, { todos, text }) {
+  render({}, { todos, text }) {
     return (
       <form onSubmit={this.addTodo} action="javascript:">
         <input value={text} onInput={this.setText} />
         <button type="submit">Add</button>
-        <ul>
-          {todos.map(({text}) => (
-            <TodoItem text={text} />
-          ))}
-        </ul>
+        <ul>{todos.map(todo => <TodoItem text={todo.text} />)}</ul>
       </form>
     );
   }
