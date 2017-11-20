@@ -12,7 +12,7 @@ module.exports = {
     publicPath: ''
   },
   resolve: {
-    extensions: ['', '.ts', '.tsx', '.js', 'jsx'],
+    extensions: ['', '.ts', '.tsx', '.js'],
     alias: {
       'react': 'preact-compat',
       'react-dom': 'preact-compat'
@@ -27,7 +27,7 @@ module.exports = {
     }],
     loaders: [{
       test: /\.tsx?$/,
-        loader: "ts-loader",
+      loader: 'ts-loader',
       exclude: /node_modules/
     }]
   },
