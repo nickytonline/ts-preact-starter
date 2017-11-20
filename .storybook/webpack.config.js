@@ -27,7 +27,7 @@ module.exports = {
     }],
     loaders: [{
       test: /\.tsx?$/,
-      loader: 'awesome-typescript',
+        loader: "ts-loader",
       exclude: /node_modules/
     }]
   },
