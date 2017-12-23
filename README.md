@@ -19,8 +19,7 @@ To run tests:
 * Tests are set up to run out of the `__tests__` folder. I put this by default as this appears to be part of the Jest defaults, but if you prefer to have your tests beside the code you want to test, simply modify the regex in the Jest configuration in `package.json`.
 
 To run the workbench:
+
 * `npm run workbench` or `yarn run workbench`
 * Navigate to [http://localhost:9001](http://localhost:9001)
-* For more information on using the workbench, see:
-  * [React Storybook](https://github.com/storybooks/react-storybook)
-  * View the [existing workbench](https://b4e17b84-5d2d-4b87-a20a-4a0c87ccd537.sbook.io) online
+* For more information on using the workbench, see [React Storybook](https://github.com/storybooks/react-storybook)
