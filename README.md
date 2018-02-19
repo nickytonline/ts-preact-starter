@@ -5,6 +5,8 @@
 ts-preact-starter
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nickytonline/ts-preact-starter.svg)](https://greenkeeper.io/)
+
 This is a barebones starter kit for Preact with TypeScript. The initial goal of this is just to be able to clone a repo and get going with Preact and TypeScript.
 Here's the starter kit deployed at [typescript-preact-starter.iamdeveloper.com](https://typescript-preact-starter.iamdeveloper.com).
 
