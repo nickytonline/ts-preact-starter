@@ -31,7 +31,7 @@
     "@kadira/storybook": "2.35.3",
     "@types/jest": "22.1.4",
     "@types/webpack": "4.0.0",
-    "html-webpack-plugin": "2.30.1",
+    "html-webpack-plugin": "3.0.0",
     "jest": "22.3.0",
     "preact-compat": "3.18.0",
     "ts-loader": "3.5.0",
