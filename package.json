@@ -43,7 +43,7 @@
     "webpack-dev-server": "2.11.1"
   },
   "dependencies": {
-    "preact": "8.2.7",
+    "preact": "8.2.8",
     "tslib": "1.9.0"
   }
 }
