@@ -2,6 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/bxe1t656us4dp5dd?svg=true)](https://ci.appveyor.com/project/nickytonline/ts-preact-starter)
 [![Build status](https://img.shields.io/travis/nickytonline/ts-preact-starter.svg)](https://travis-ci.org/nickytonline/ts-preact-starter)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/05030e94-4c6a-4699-9c36-552a2e345f35/deploy-status)](https://app.netlify.com/sites/fervent-newton-a3b969/deploys)
 
 <img src="https://flat.badgen.net/dependabot/nickytonline/ts-preact-starter?icon=dependabot" alt="Dependabot Badge" />
 
