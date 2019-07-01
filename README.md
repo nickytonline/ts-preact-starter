@@ -24,3 +24,5 @@ To run Storybook:
 1. `npm run storybook`
 1. Navigate to [http://localhost:6006](http://localhost:6006)
 1. For more information on using Storybook, see the [Storybook for Preact](https://storybook.js.org/docs/guides/guide-preact) guide.
+
+A deployed demo can be found [here](https://vibrant-bell-0ec4b0.netlify.com).
