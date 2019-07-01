@@ -10,12 +10,12 @@ This is a barebones starter kit for Preact with TypeScript. Click the green "Use
 
 To get up and running
 
-1. `npm install` or `yarn` (assuming you have yarn installed globally)
-1. From the command line run `npm start` or `yarn start`
+1. `npm install`
+1. From the command line run `npm start`
 1. Navigate to [http://localhost:3000](http://localhost:3000)
 
 To run tests:
-1. `npm test` or `yarn test`
+1. `npm test`
 1. To run in watch mode, run `npm run test:watch` or `yarn run test:watch`
 1. Tests are set up to run out of the `__tests__` folder. I put this by default as this appears to be part of the Jest defaults, but if you prefer to have your tests beside the code you want to test, simply modify the regex in the Jest configuration in `package.json`.
 
