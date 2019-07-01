@@ -1,5 +1,5 @@
 import * as webpack from 'webpack';
-import { resolve } from 'path';
+import { resolve, join } from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const { HotModuleReplacementPlugin } = webpack;
@@ -10,10 +10,8 @@ interface WebpackEnvironment {
   NODE_ENV: string;
 }
 
-module.exports = (env: WebpackEnvironment) => {
-  const { NODE_ENV = null } = env;
-  const isProd = NODE_ENV === 'production';
-  const appEntryPoints = isProd
+module.exports = (env: WebpackEnvironment, argv: { mode: string }) => {
+  const appEntryPoints = argv.mode === 'production'
   ? ['./index']
   : [
       `webpack-dev-server/client?http://localhost:${port}`,
@@ -35,7 +33,7 @@ module.exports = (env: WebpackEnvironment) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js', 'jsx']
     },
-    devtool: 'source-map',
+    devtool: argv.mode === 'production' ? 'source-map' : 'cheap-eval-source-map',
     module: {
       rules: [
         {
@@ -68,16 +66,11 @@ module.exports = (env: WebpackEnvironment) => {
     ]
   };
 
-  if (NODE_ENV === 'dev') {
+  if (argv.mode === 'development') {
     config.devServer = {
-      port,
-      historyApiFallback: true,
-      stats: {
-        colors: true
-      },
-      noInfo: false,
-      quiet: false,
-      hot: true
+      contentBase: join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
     };
   }
 

@@ -1,8 +1,6 @@
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/preact';
 import { h } from 'preact';
-import TodoItem from '../src/components/todo-item';
-
-declare var module;
+import TodoItem from '../todo-item';
 
 storiesOf('Todo Item', module)
   .add('with text', () => {
