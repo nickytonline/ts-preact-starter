@@ -1,6 +1,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/bxe1t656us4dp5dd?svg=true)](https://ci.appveyor.com/project/nickytonline/ts-preact-starter)
 [![Build status](https://img.shields.io/travis/nickytonline/ts-preact-starter.svg)](https://travis-ci.org/nickytonline/ts-preact-starter)
 
+<img src="https://flat.badgen.net/dependabot/nickytonline/ts-preact-starter?icon=dependabot" alt="Dependabot Badge" />
+
 ts-preact-starter
 ================
 
