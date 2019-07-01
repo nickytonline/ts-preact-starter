@@ -12,7 +12,7 @@ export default class TodoList extends Component<{}, TodoListState> {
   setText = (e: Event) => {
     this.setState({
       text: (e.target as HTMLInputElement).value
-    } as TodoListState);
+    });
   }
 
   addTodo = () => {
