@@ -56,7 +56,7 @@
     "webpack-dev-server": "3.7.2"
   },
   "dependencies": {
-    "preact": "8.4.2",
+    "preact": "8.5.0",
     "tslib": "1.10.0"
   }
 }
