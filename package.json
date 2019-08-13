@@ -17,13 +17,13 @@
   "scripts": {
     "prebuild": "CI=1 npm i cypress",
     "build": "webpack",
-    "postbuild": "http-server ./dist & npm run e2e && fkill :8080 && npm",
+    "postbuild": "http-server ./dist & npm run e2e && fkill :8080",
     "start": "webpack-dev-server --mode=development --progress --config ./webpack.config.ts",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "e2e": "cypress run",
+    "e2e": "[ ! -z \"$DEPLOY_URL\" ] && cypress run || echo 'e2e only runs on Netlify'",
     "e2e:dev": "CYPRESS_baseUrl=http://localhost:9000 cypress open"
   },
   "jest": {
