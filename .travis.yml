@@ -1,5 +1,9 @@
 language: node_js
 
+script:
+  - npm test
+  - npm build
+
 cache:
   yarn: true
   directories:
