@@ -27,9 +27,9 @@ export default class TodoList extends Component<{}, TodoListState> {
   render({}, { todos, text }) {
     return (
       <form onSubmit={this.addTodo} action="javascript:">
-        <input value={text} onInput={this.setText} />
-        <button type="submit">Add</button>
-        <ul>{todos.map(todo => <TodoItem text={todo.text} />)}</ul>
+        <input value={text} onInput={this.setText} data-cy="new-todo-input" />
+        <button type="submit" data-cy="todo-submit">Add</button>
+        <ul data-cy="todo-list">{todos.map(todo => <TodoItem text={todo.text} />)}</ul>
       </form>
     );
   }

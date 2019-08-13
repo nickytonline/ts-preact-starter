@@ -4,6 +4,6 @@ interface TodoItemProps {
   text: string;
 }
 
-const TodoItem = ({text}: TodoItemProps) => (<li>{text}</li>);
+const TodoItem = ({text}: TodoItemProps) => (<li data-cy="todo-item">{text}</li>);
 
 export default TodoItem;
