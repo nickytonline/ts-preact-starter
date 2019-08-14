@@ -17,7 +17,7 @@
   "scripts": {
     "prebuild": "CI=1 npm i cypress",
     "build": "webpack",
-    "postbuild": "http-server ./dist & npm run e2e && fkill :8080",
+    "postbuild": "http-server -p 8080 ./dist & npm run e2e && fkill -f :8080",
     "start": "webpack-dev-server --mode=development --progress --config ./webpack.config.ts",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
