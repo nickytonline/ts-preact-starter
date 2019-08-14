@@ -2,7 +2,7 @@
 environment:
   matrix:
   # node.js
-  - nodejs_version: "12"  
+  - nodejs_version: "12"
   - nodejs_version: "10"
   - nodejs_version: "8"
 
@@ -11,7 +11,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - yarn
+  - npm i
 
 cache:
   - "%LOCALAPPDATA%/Yarn"
@@ -19,6 +19,7 @@ cache:
 # Post-install test scripts.
 test_script:
   - npm test
+  - npm run build
 
 build: off
 
