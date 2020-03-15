@@ -36,23 +36,26 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string }) => {
     devtool: argv.mode === 'production' ? 'source-map' : 'cheap-eval-source-map',
     module: {
       rules: [
+        /**
+         * ESLINT
+         * First, run the linter.
+         * It's important to do this before Babel processes the JS.
+         * Only testing .ts and .tsx files (React code)
+         */
         {
+          test: /\.(ts|tsx)$/,
           enforce: 'pre',
-          test: /\.tsx?$/,
-          loader: 'tslint-loader',
+          use: [
+            {
+              options: {
+                eslintPath: require.resolve('eslint'),
+      
+              },
+              loader: require.resolve('eslint-loader'),
+            },
+          ],
           exclude: /node_modules/,
-          options: {
-            configFile: resolve(__dirname, './tslint.json'),
-            emitErrors: true,
-            failOnHint: true,
-            typeCheck: true
-          }
         },
-        {
-          test: /\.tsx?$/,
-          loader: 'ts-loader',
-          exclude: /node_modules/
-        }
       ]
     },
     plugins: [
