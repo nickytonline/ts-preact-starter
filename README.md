@@ -1,5 +1,7 @@
 # ts-preact-starter
 
+**This project is no longer maintained as there are better projects for TypeScript and Preact that have popped up since this project was created**
+
 [![Build status](https://img.shields.io/travis/nickytonline/ts-preact-starter.svg)](https://travis-ci.org/nickytonline/ts-preact-starter)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/05030e94-4c6a-4699-9c36-552a2e345f35/deploy-status)](https://app.netlify.com/sites/fervent-newton-a3b969/deploys)
 
